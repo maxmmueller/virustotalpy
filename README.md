@@ -9,6 +9,7 @@ pip install virustotalpy
 
 ## Usage 🚀
 >In order to get a VirusTotal api-key, you need to [sign up](https://www.virustotal.com/gui/join-us) for an account
+>
 > ![VirusTotal view API key](imgs/APIKey.jpeg)
 
 - Upload a file to be analyzed and scanned for malware
