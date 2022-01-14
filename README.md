@@ -29,3 +29,4 @@ resp = scanner.api_request('get', path='PATH_TO_FILE')
 print(resp)
 ```
 
+more [examples](examples)
