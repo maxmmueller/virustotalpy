@@ -12,6 +12,7 @@ pip install virustotalpy
 >
 > ![VirusTotal view API key](imgs/APIKey.jpeg)
 
+
 - Upload a file to be analyzed and scanned for malware
 ```python
 from virustotalpy import Virustotal
