@@ -111,9 +111,3 @@ def large_file_url():
     response = requests.request("GET", url, headers=headers)
 
     return(response.text[15:-3])
-
-scanner = Virustotal("1dce0c1e8260ad7d7e95704c3be181a8c32060e9a6e170dba8547029d3c2fc00")
-
-resp = scanner.api_request('post', path='C:\\Users\\max20\\Downloads\\datasets.zip')
-# resp = scanner.api_request('get', path='C://Users//max20//Pictures//Hintergrund//rainbow mirror.jpeg')
-print(resp)
