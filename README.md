@@ -1,10 +1,17 @@
 # virustotalpy
-Virustotalpy is library for an easier interaction with the [VirusTotal](https://www.virustotal.com/) v3 api
+Virustotalpy is python library for an easier interaction with the public [VirusTotal](https://www.virustotal.com/) v3 api
 
 ## Installation ⚙️
-> Requires Python 3.7 or newer.
+Method 1:
+> Requires Python 3.6 or newer.
 ```
 pip install virustotalpy
+```
+
+Method 2:
+> Requires [git](https://git-scm.com/downloads) 
+```
+git clone https://github.com/maxmmueller/virustotalpy.git
 ```
 
 ## Usage 🚀
