@@ -1,8 +1,5 @@
 # (c) 2021-2022 Maximilian Müller - Apache License 2.0
 
-# virustotalpy is a library for an easier interaction with the v3 api
-# powered by https://www.virustotal.com
-
 import requests
 import hashlib
 import os
@@ -57,14 +54,21 @@ class Virustotal:
 
         if method == "post":
             if resource == "file":
-                path = {"file": (os.path.basename(path), open(os.path.abspath(path), "rb"))}
-                response = requests.post(endpoint, files=path, headers=HEADERS)
+                path_dict = {"file": (os.path.basename(path), open(os.path.abspath(path), "rb"))}
+                # files bigger than 32MB need a special url
+                if os.path.getsize(path) >= 32000000:
+                    endpoint = large_file_url()
+                    response = requests.post(endpoint, files=path_dict, headers=HEADERS)
+                    print(response.status_code)
+                else:
+                    response = requests.post(endpoint, files=path_dict, headers=HEADERS)
 
             elif resource == "url":
                 response = requests.post(endpoint, data={"url": url}, headers=HEADERS)
 
-            data = dict(status_code=response.status_code, json_resp=response.json())
-            return data
+            # data = dict(status_code=response.status_code, json_resp=response.json())
+            # return data
+            return response
 
         elif method == "get":
             if resource == "file":
@@ -94,3 +98,22 @@ def sha1(filename):
             hash.update(chunk)
 
     return hash.hexdigest()
+
+# files bigger than 32MB need a special url
+def large_file_url():
+    url = "https://www.virustotal.com/api/v3/files/upload_url"
+
+    headers = {
+        "Accept": "application/json",
+        "x-apikey": "1dce0c1e8260ad7d7e95704c3be181a8c32060e9a6e170dba8547029d3c2fc00"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+
+    return(response.text[15:-3])
+
+scanner = Virustotal("1dce0c1e8260ad7d7e95704c3be181a8c32060e9a6e170dba8547029d3c2fc00")
+
+resp = scanner.api_request('post', path='C:\\Users\\max20\\Downloads\\datasets.zip')
+# resp = scanner.api_request('get', path='C://Users//max20//Pictures//Hintergrund//rainbow mirror.jpeg')
+print(resp)

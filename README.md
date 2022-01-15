@@ -1,5 +1,6 @@
 # virustotalpy
-Virustotalpy is python library for an easier interaction with the public [VirusTotal](https://www.virustotal.com/) v3 api
+Virustotalpy is python library for an easier interaction with the public [VirusTotal](https://www.virustotal.com/) v3 api. 
+It let's you scan any URL and files up to 650MB.
 
 ## Installation ⚙️
 Method 1:
@@ -20,14 +21,15 @@ git clone https://github.com/maxmmueller/virustotalpy.git
 > ![VirusTotal view API key](imgs/APIKey.jpeg)
 
 
-- Upload a file to be analyzed and scanned for malware:
+At first the Virustotal class has to be initialised
 ```python
 from virustotalpy import Virustotal
 
-# first initialise the Virustotal class
 scanner = Virustotal('YOUR_API_KEY')
-
-# make api request
+```
+#### Files
+- make api request
+```
 resp = scanner.api_request('post', path='PATH_TO_FILE')
 ```
 - Obtain information about the file:
@@ -38,11 +40,25 @@ resp = scanner.api_request('get', path='PATH_TO_FILE')
 print(resp)
 ```
 
+#### URLs
+
+- make api request
+```
+resp = scanner.api_request('post', path='URL')
+```
+- Obtain information about the url:
+> NOTE: To get this information, you must use the "post" method first.
+
+```python
+resp = scanner.api_request('get', path='URL')
+print(resp)
+```
+
 - more [examples](examples)
 
 ## Learn more 🔗:
 
-- [Docs](https://pypi.org/project/virustotalpy/)
+- [GitHub](https://github.com/maxmmueller/virustotalpy)
 - [API](https://developers.virustotal.com/reference/overview)
 
 
