@@ -13,7 +13,7 @@ pip install virustotalpy
 > ![VirusTotal view API key](imgs/APIKey.jpeg)
 
 
-- Upload a file to be analyzed and scanned for malware
+- Upload a file to be analyzed and scanned for malware:
 ```python
 from virustotalpy import Virustotal
 
@@ -23,8 +23,8 @@ scanner = Virustotal('YOUR_API_KEY')
 # make api request
 resp = scanner.api_request('post', path='PATH_TO_FILE')
 ```
-- Obtain information about the file
-- NOTE: To get this information, you must use the "post" method first.
+- Obtain information about the file:
+> NOTE: To get this information, you must use the "post" method first.
 
 ```python
 resp = scanner.api_request('get', path='PATH_TO_FILE')
