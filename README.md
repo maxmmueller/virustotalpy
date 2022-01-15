@@ -4,7 +4,7 @@ It let's you scan any URL and files up to 650MB.
 
 ## Installation ⚙️
 Method 1:
-> Requires Python 3.6 or newer.
+> Requires [Python](https://www.python.org/downloads/) 3.6 or newer.
 ```
 pip install virustotalpy
 ```
