@@ -58,7 +58,7 @@ print(resp)
 
 ## Learn more 🔗:
 
-- [GitHub](https://github.com/maxmmueller/virustotalpy)
+- [PyPI](https://pypi.org/project/virustotalpy)
 - [API](https://developers.virustotal.com/reference/overview)
 
 
