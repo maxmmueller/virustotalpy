@@ -42,4 +42,5 @@ print(resp)
 ## License 📃
 
 Copyright © 2021-2022 Maximilian Müller.
+
 [Apache License 2.0](LICENSE).
