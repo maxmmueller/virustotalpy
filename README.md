@@ -24,11 +24,11 @@ scanner = Virustotal('YOUR_API_KEY')
 resp = scanner.api_request('post', path='PATH_TO_FILE')
 ```
 - Obtain information about the file
-NOTE: To get this information, you must use the "post" method first.
+- NOTE: To get this information, you must use the "post" method first.
 
 ```python
 resp = scanner.api_request('get', path='PATH_TO_FILE')
 print(resp)
 ```
 
-more [examples](examples)
+- more [examples](examples)
