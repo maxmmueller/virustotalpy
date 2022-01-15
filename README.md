@@ -32,3 +32,14 @@ print(resp)
 ```
 
 - more [examples](examples)
+
+## Learn more 🔗:
+
+- [Docs](https://pypi.org/project/virustotalpy/)
+- [API](https://developers.virustotal.com/reference/overview)
+
+
+## License 📃
+
+Copyright © 2021-2022 Maximilian Müller.
+[Apache License 2.0](LICENSE).
