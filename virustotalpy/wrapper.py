@@ -28,7 +28,7 @@ class Virustotal:
     def __init__(self, api_key):
         self.api_key = api_key
 
-    def api_request(self, method, path=None, url=None):
+    def api_request(self, method, path=None, url=None, ip=None):
         """
         Sends a request to the VirusTotal API
         :param method: specifies the request method to be used
@@ -43,12 +43,15 @@ class Virustotal:
         }
 
         # checks if the given resource is a file or a url
-        if url == None and path != None:
+        if url == None and ip == None and path != None:
             resource = "file"
             endpoint = BASE_URL + "files"
-        elif path == None and url != None:
+        elif path == None and ip == None and url != None:
             resource = "url"
             endpoint = BASE_URL + "urls"
+        elif path == None and url == None and ip != None:
+            resource = "ip"
+            endpoint = BASE_URL + "ip_addresses"
         else:
             raise ValueError("No file path or url was given")
 
@@ -77,6 +80,9 @@ class Virustotal:
             elif resource == "url":
                 url_id = urlsafe_b64encode(url.encode()).decode().strip("=")
                 endpoint = f"{endpoint}/{url_id}"
+
+            elif resource == "ip":
+                endpoint = f"{endpoint}/{ip}"
 
             response = requests.get(endpoint, headers=HEADERS)
             data = dict(status_code=response.status_code, json_resp=response.json())
