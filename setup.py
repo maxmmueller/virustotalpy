@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 # This call to setup() does all the work
 setup(
     name="virustotalpy",
-    version="0.1.0",
+    version="0.2.0",
     description="library for an easier interaction with the v3 api",
     long_description=open('description.md').read(),
     long_description_content_type='text/markdown',
@@ -13,7 +13,7 @@ setup(
     license="Apache License 2.0",
     classifiers=[
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Apache License 2.0",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
