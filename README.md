@@ -3,7 +3,7 @@ Virustotalpy is python library for an easier interaction with the public [VirusT
 
 ## Installation ⚙️
 Method 1:
-> Requires Python 3.6 or newer.
+> Requires [Python](https://www.python.org/downloads/) 3.6 or newer.
 ```
 pip install virustotalpy
 ```
@@ -57,7 +57,7 @@ print(resp)
 
 ## Learn more 🔗:
 
-- [GitHub](https://github.com/maxmmueller/virustotalpy)
+- [PyPI](https://pypi.org/project/virustotalpy)
 - [API](https://developers.virustotal.com/reference/overview)
 
 
