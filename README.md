@@ -28,7 +28,7 @@ scanner = Virustotal('YOUR_API_KEY')
 ```
 #### Files
 - make api request
-```
+```python
 resp = scanner.api_request('post', path='PATH_TO_FILE')
 ```
 - Obtain information about the file:
