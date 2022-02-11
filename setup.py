@@ -11,7 +11,6 @@ setup(
     license="Apache License 2.0",
     classifiers=[
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: Apache License 2.0",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
