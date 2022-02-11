@@ -1,7 +1,5 @@
-# Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 
-# This call to setup() does all the work
 setup(
     name="virustotalpy",
     version="0.2.0",
