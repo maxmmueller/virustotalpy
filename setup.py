@@ -1,10 +1,10 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name="virustotalpy",
-    version="0.2.0",
+    version="0.2.1",
     description="library for an easier interaction with the v3 api",
-    long_description=open('description.md').read(),
+    long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url="https://github.com/maxmmueller/virustotalpy",
     author="Maximilian Müller",

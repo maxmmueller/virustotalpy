@@ -17,7 +17,7 @@ git clone https://github.com/maxmmueller/virustotalpy.git
 ## Usage 🚀
 >In order to get a VirusTotal api-key, you need to [sign up](https://www.virustotal.com/gui/join-us) for an account
 >
-> ![VirusTotal view API key](imgs/APIKey.jpeg)
+> ![VirusTotal view API key](https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/APIKey.jpeg)
 
 
 At first the Virustotal class has to be initialised
