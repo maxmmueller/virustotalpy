@@ -28,7 +28,7 @@ class Virustotal:
     def __init__(self, api_key):
         self.api_key = api_key
 
-    def api_request(self, method, path=None, url=None, ip=None):
+    def api_request(self, method, path=None, url=None, ip=None, hash=None):
         """
         Sends a request to the VirusTotal API
         :param method: specifies the request method to be used
@@ -75,7 +75,9 @@ class Virustotal:
 
         elif method == "get":
             if resource == "file":
-                endpoint = f"{endpoint}/{sha1(path)}"
+                if self.hash == None:
+                    self.hash = sha1(path)
+                endpoint = f"{endpoint}/{self.hash}"
 
             elif resource == "url":
                 url_id = urlsafe_b64encode(url.encode()).decode().strip("=")
