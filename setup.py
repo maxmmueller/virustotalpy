@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="virustotalpy",
-    version="0.2.1",
+    version="0.2.2",
     description="library for an easier interaction with the v3 api",
     long_description=open('pypi_descr.md').read(),
     long_description_content_type='text/markdown',
