@@ -1,7 +1,7 @@
 # virustotalpy
 Virustotalpy is python library for an easier interaction with the public [VirusTotal](https://www.virustotal.com/) v3 api. Virustotalpy v0.2.0 let's you analyse and scan IPs, URLs and files up to 650MB.
 
-## Installation ⚙️
+## Installation ⚙
 Method 1:
 > Requires [Python](https://www.python.org/downloads/) 3.6 or newer.
 ```
