@@ -1,7 +1,7 @@
 # virustotalpy
 Virustotalpy is python library for an easier interaction with the public [VirusTotal](https://www.virustotal.com/) v3 api. Virustotalpy v0.2.0 let's you analyse and scan IPs, URLs and files up to 650MB.
 
-## Installation ⚙
+## Installation
 Method 1:
 > Requires [Python](https://www.python.org/downloads/) 3.6 or newer.
 ```
@@ -14,7 +14,7 @@ Method 2:
 git clone https://github.com/maxmmueller/virustotalpy.git
 ```
 
-## Usage 🚀
+## Usage
 >In order to get a VirusTotal api-key, you need to [sign up](https://www.virustotal.com/gui/join-us) for an account
 >
 > ![VirusTotal view API key](https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/APIKey.jpeg)
@@ -55,13 +55,13 @@ print(resp)
 
 - more [examples](examples)
 
-## Learn more 🔗:
+## Learn more
 
 - [PyPI](https://pypi.org/project/virustotalpy)
 - [API](https://developers.virustotal.com/reference/overview)
 
 
-## License 📃
+## License
 
 Copyright © 2021-2022 Maximilian Müller.
 
