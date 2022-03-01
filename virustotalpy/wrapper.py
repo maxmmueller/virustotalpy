@@ -19,7 +19,6 @@ class vtError(Exception):
         except:
             return "Unknown Error"
 
-
     def error(self):
         return self.resp.json().get("error")
 
@@ -60,11 +59,11 @@ class Virustotal:
                 path_dict = {"file": (os.path.basename(path), open(os.path.abspath(path), "rb"))}
                 # files bigger than 32MB need a special url
                 if os.path.getsize(path) >= 32000000:
-                    endpoint = large_file_url()
+                    endpoint = large_file_url(self.api_key)
+                try:
                     response = requests.post(endpoint, files=path_dict, headers=HEADERS)
-                    print(response.status_code)
-                else:
-                    response = requests.post(endpoint, files=path_dict, headers=HEADERS)
+                except:
+                    raise MemoryError("Given file seems to be an archive")
 
             elif resource == "url":
                 response = requests.post(endpoint, data={"url": url}, headers=HEADERS)
@@ -75,9 +74,9 @@ class Virustotal:
 
         elif method == "get":
             if resource == "file":
-                if self.hash == None:
-                    self.hash = sha1(path)
-                endpoint = f"{endpoint}/{self.hash}"
+                if hash == None:
+                    hash = sha1(path)
+                endpoint = f"{endpoint}/{hash}"
 
             elif resource == "url":
                 url_id = urlsafe_b64encode(url.encode()).decode().strip("=")
@@ -108,12 +107,12 @@ def sha1(filename):
     return hash.hexdigest()
 
 # files bigger than 32MB need a special url
-def large_file_url():
+def large_file_url(api_key):
     url = "https://www.virustotal.com/api/v3/files/upload_url"
 
     headers = {
         "Accept": "application/json",
-        "x-apikey": "1dce0c1e8260ad7d7e95704c3be181a8c32060e9a6e170dba8547029d3c2fc00"
+        "x-apikey": api_key
     }
 
     response = requests.request("GET", url, headers=headers)
