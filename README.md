@@ -1,17 +1,28 @@
-# virustotalpy
-Virustotalpy is python library for an easier interaction with the public VirusTotal [v3 api](https://developers.virustotal.com/reference/overview). Virustotalpy v0.2.x let's you analyse and scan IPs, URLs and files up to 650MB.
+
+<div><p align="center"><img src="https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/vt_logo.jpeg" width="70" height="70" />
+
+</p><h3 align="center">VirusTotalPy</h3></div>
+
+<p align="center">Open-source Python library for an easier interaction with the VirusTotal v3 API</p>
+
+
+##### Note
+This is an unofficial application, not created by VirusTotal. 
+
+The latest Version 0.2.4 lets you analyse and scan IPs, URLs and files up to 650MB.
 
 ## Installation
 ##### Method 1:
-> Requires [Python](https://www.python.org/downloads/) 3.6 or newer.
+<a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Requires-Python%203.6%20(or%20newer)-blue"></a>
 ```
-pip install virustotalpy
+$ pip install virustotalpy
 ```
 
 ##### Method 2:
-> Requires [git](https://git-scm.com/downloads) 
+ <a href="https://git-scm.com/downloads"><img src="https://img.shields.io/badge/Requires-git-blue"></a>
+
 ```
-git clone https://github.com/maxmmueller/virustotalpy.git
+$ git clone https://github.com/maxmmueller/virustotalpy.git
 ```
 
 ##### Method 3:
@@ -19,52 +30,20 @@ Download the [latest Release](https://github.com/maxmmueller/virustotalpy/releas
 
 
 ## Usage
->In order to get a VirusTotal api-key, you need to [sign up](https://www.virustotal.com/gui/join-us) for an account
+In order to use the API you need to [sign up](https://www.virustotal.com/gui/join-us) for a VirusTotal account and create an API key.
 >
 > ![VirusTotal view API key](https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/APIKey.jpeg)
 
 
-At first the Virustotal class has to be initialised
-```python
-from virustotalpy import Virustotal
-
-scanner = Virustotal('YOUR_API_KEY')
-```
-#### Files
-- make api request
-```python
-resp = scanner.api_request('post', path='PATH_TO_FILE')
-```
-- Obtain information about the file:
-> NOTE: To get this information, you have to use the "post" method first.
-
-```python
-resp = scanner.api_request('get', path='PATH_TO_FILE')
-print(resp)
-```
-
-#### URLs
-
-- make api request
-```
-resp = scanner.api_request('post', path='URL')
-```
-- Obtain information about the url:
-> NOTE: To get this information, you have to use the "post" method first.
-
-```python
-resp = scanner.api_request('get', path='URL')
-print(resp)
-```
-
-- more [examples](examples)
+If you find a bug please create an [issue](https://github.com/maxmmueller/virustotalpy/issues/new).
 
 ## Learn more
 
+- [Docs](docs/docs.ipynb)
 - [PyPI](https://pypi.org/project/virustotalpy)
 - [API](https://developers.virustotal.com/reference/overview)
 
-## License
+### License
 
 Copyright © 2021-2022 Maximilian Müller.
-[Apache License 2.0](LICENSE).
+[Apache License 2.0](LICENSE)
