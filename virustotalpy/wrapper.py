@@ -25,11 +25,15 @@ class vtError(Exception):
 
 class Virustotal:
     def __init__(self, api_key):
+        """
+        :param api_key: VirusTotal API key
+        """
         self.api_key = api_key
 
     def api_request(self, method, path=None, url=None, ip=None, hash=None):
         """
         Sends a request to the VirusTotal API
+        
         :param method: specifies the request method to be used
         :param path: valid path for the file to be used within the request
         :param url: valid url for the domain to be used within the request
@@ -52,7 +56,7 @@ class Virustotal:
             resource = "ip"
             endpoint = BASE_URL + "ip_addresses"
         else:
-            raise ValueError("No file path or url was given")
+            raise ValueError("No file path, url, or IP was given")
 
         if method == "post":
             if resource == "file":
@@ -91,7 +95,7 @@ class Virustotal:
             if response.status_code != 200:
                 raise vtError(response)
             else:
-                return data['json_resp']["data"]["attributes"]
+                return data["json_resp"]["data"]["attributes"]
 
 
 # generates sha1 hash of the passed file
@@ -116,5 +120,4 @@ def large_file_url(api_key):
     }
 
     response = requests.request("GET", url, headers=headers)
-
     return(response.text[15:-3])
