@@ -1,25 +1,30 @@
 
-<div><p align="center"><img src="https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/vt_logo.jpeg" width="70" height="70" />
+<p align="center"><img src="https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/vt_logo.jpeg" width="70" height="70"/></p>
 
-</p><h3 align="center">VirusTotalPy</h3></div>
+<p><h3 align="center">VirusTotalPy</h3></p>
 
 <p align="center">Open-source Python library for an easier interaction with the VirusTotal v3 API</p>
+
+<p align="center">
+<img src="https://img.shields.io/pypi/v/virustotalpy.svg?style=square">
+<a href="https://github.com/maxmmueller/virustotalpy/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-blue"/></a>
 
 
 ##### Note
 This is an unofficial application, not created by VirusTotal. 
 
+## Features
 The latest Version 0.2.4 lets you analyse and scan IPs, URLs and files up to 650MB.
 
 ## Installation
 ##### Method 1:
-<a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Requires-Python%203.6%20(or%20newer)-blue"></a>
+<a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Requires-Python%203.6%20(or%20newer)-blue"/></a>
 ```
 $ pip install virustotalpy
 ```
 
 ##### Method 2:
- <a href="https://git-scm.com/downloads"><img src="https://img.shields.io/badge/Requires-git-blue"></a>
+ <a href="https://git-scm.com/downloads"><img src="https://img.shields.io/badge/Requires-git-blue"/></a>
 
 ```
 $ git clone https://github.com/maxmmueller/virustotalpy.git
