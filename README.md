@@ -50,5 +50,5 @@ If you find a bug please create an [issue](https://github.com/maxmmueller/virust
 
 ### License
 
-Copyright © 2021-2022 Maximilian Müller.
+2021-2023 Maximilian Müller.
 [Apache License 2.0](LICENSE)
