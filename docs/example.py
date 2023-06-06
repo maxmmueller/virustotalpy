@@ -1,17 +1,14 @@
-from virustotalpy import Virustotal
+from virustotalpy import Scanner
 
-vt = Virustotal("API_KEY")
+API_KEY = "YOUR-API-KEY"
+USER_NAME = "YOUR-VIRUSTOTAL-USERNAME"
+scanner = Scanner(API_KEY, USER_NAME)
 
-# scan a file for malware
-vt.api_request("post", path="PATH")
-resp = vt.api_request("get", path="PATH")
-print(resp)
+data = [
+    "example.com",
+    "192.168.0.1",
+    "test.exe",
+]
 
-# scan a domain for malware
-vt.api_request("post", url="URL")
-resp = vt.api_request("get", url="URL")
-print(resp)
-
-# scan an ip-adress for malware
-resp = vt.api_request("get", ip="IP")
-print(resp)
+result = scanner.scan(data)
+print(result)
