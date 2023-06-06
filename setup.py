@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(
     name="virustotalpy",
-    version="0.2.4",
-    description="library for an easier interaction with the v3 api",
+    version="1.0",
+    description="library for an easier interaction with the VirusTotal v3 API",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url="https://github.com/maxmmueller/virustotalpy",
@@ -18,6 +18,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent"
     ],
     packages=["virustotalpy"],
