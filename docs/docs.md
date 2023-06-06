@@ -52,5 +52,4 @@ The scan_results dictionary will contain the results for each resource:
 ```
 [more examples](example.py)
 
-## Note: 
-The exact attributes and their meanings can be found in the VirusTotal API documentation.
+Note: The exact attributes and their meanings can be found in the VirusTotal API documentation.
