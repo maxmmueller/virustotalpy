@@ -15,7 +15,7 @@ VirusTotalPy
 
 
 ## Features
-The latest Version 1.0 lets you analyse and scan a list of IPs, URLs and files up to 650MB.
+The latest Version 1.0.1 lets you analyse and scan a list of IPs, URLs and files up to 650MB.
 
 ## Installation
 ##### Method 1:
@@ -62,7 +62,7 @@ print(result)
 
 ## Learn more
 
-- [Documentation and reference](docs/docs.md)
+- [Documentation and reference](https://github.com/maxmmueller/virustotalpy/blob/main/docs/docs.md)
 - [PyPI](https://pypi.org/project/virustotalpy)
 - [API reference](https://developers.virustotal.com/reference/overview)
 

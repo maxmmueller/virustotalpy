@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="virustotalpy",
-    version="1.0",
+    version="1.0.1",
     description="library for an easier interaction with the VirusTotal v3 API",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
