@@ -6,9 +6,8 @@ VirusTotalPy
 </h1>
 
 <p align="center">
-<img src="https://img.shields.io/pypi/v/virustotalpy.svg?style=square">
-<img src="https://img.shields.io/badge/license-Apache%202-blue">
-<a href="https://github.com/maxmmueller/virustotalpy/blob/main/LICENSE"></a>
+<a href="https://pypi.org/project/virustotalpy"><img src="https://img.shields.io/pypi/v/virustotalpy.svg?style=square"/></a>
+<a href="https://github.com/maxmmueller/virustotalpy/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-blue"/></a>
 </p>
 
 <p align="center">Open-source Python library for an easier interaction with the VirusTotal v3 API</p>
