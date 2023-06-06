@@ -1,6 +1,6 @@
 <h1 align="center">
 <sub>
-<img src="imgs/vt_logo.jpeg" height="30">
+<img src="https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/vt_logo.jpeg" height="30">
 </sub>
 VirusTotalPy
 </h1>
@@ -38,7 +38,7 @@ Download the [latest Release](https://github.com/maxmmueller/virustotalpy/releas
 ## Usage
 In order to use the API you need to [sign up](https://www.virustotal.com/gui/join-us) for a VirusTotal account and create an API key.
 >
-> ![View API key](imgs/api_key.jpeg)
+> ![View API key](https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/api_key.jpeg)
 
 Code example:
 ```python
