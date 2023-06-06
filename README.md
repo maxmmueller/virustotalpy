@@ -1,33 +1,34 @@
-
-<p align="center"><img src="https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/vt_logo.jpeg" width="70" height="70"/></p>
-
-<p><h3 align="center">VirusTotalPy</h3></p>
-
-<p align="center">Open-source Python library for an easier interaction with the VirusTotal v3 API</p>
+<h1 align="center">
+<sub>
+<img src="imgs/vt_logo.jpeg" height="30">
+</sub>
+VirusTotalPy
+</h1>
 
 <p align="center">
 <img src="https://img.shields.io/pypi/v/virustotalpy.svg?style=square">
-<a href="https://github.com/maxmmueller/virustotalpy/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-blue"/></a>
+<img src="https://img.shields.io/badge/license-Apache%202-blue">
+<a href="https://github.com/maxmmueller/virustotalpy/blob/main/LICENSE"></a>
+</p>
 
+<p align="center">Open-source Python library for an easier interaction with the VirusTotal v3 API</p>
 
-##### Note
-This is an unofficial application, not created by VirusTotal. 
 
 ## Features
-The latest Version 0.2.4 lets you analyse and scan IPs, URLs and files up to 650MB.
+The latest Version 1.0 lets you analyse and scan a list of IPs, URLs and files up to 650MB.
 
 ## Installation
 ##### Method 1:
 <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Requires-Python%203.6%20(or%20newer)-blue"/></a>
 ```
-$ pip install virustotalpy
+pip install virustotalpy
 ```
 
 ##### Method 2:
  <a href="https://git-scm.com/downloads"><img src="https://img.shields.io/badge/Requires-git-blue"/></a>
 
 ```
-$ git clone https://github.com/maxmmueller/virustotalpy.git
+git clone https://github.com/maxmmueller/virustotalpy.git
 ```
 
 ##### Method 3:
@@ -37,18 +38,39 @@ Download the [latest Release](https://github.com/maxmmueller/virustotalpy/releas
 ## Usage
 In order to use the API you need to [sign up](https://www.virustotal.com/gui/join-us) for a VirusTotal account and create an API key.
 >
-> ![VirusTotal view API key](https://raw.githubusercontent.com/maxmmueller/virustotalpy/master/imgs/APIKey.jpeg)
+> ![View API key](imgs/api_key.jpeg)
 
+Code example:
+```python
+from virustotalpy import Scanner
 
-If you find a bug please create an [issue](https://github.com/maxmmueller/virustotalpy/issues/new).
+# replace this with your actual api key and username
+API_KEY = "YOUR-API-KEY"
+USER_NAME = "YOUR-VIRUSTOTAL-USERNAME"
+
+scanner = Scanner(API_KEY, USER_NAME)
+
+data = [
+    "https://www.example.com",
+    "192.168.0.1",
+    "test.exe"
+]
+
+result = scanner.scan(data)
+print(result)
+```
 
 ## Learn more
 
-- [Docs](docs/docs.ipynb)
+- [Documentation and reference](docs/docs.md)
 - [PyPI](https://pypi.org/project/virustotalpy)
-- [API](https://developers.virustotal.com/reference/overview)
+- [API reference](https://developers.virustotal.com/reference/overview)
 
-### License
+## Contributing
+Contributions to this project are welcome!
 
-2021-2023 Maximilian Müller.
+If you encounter any problems, find a bug or have feature requests, please open an [issue](https://github.com/maxmmueller/virustotalpy/issues/new).
+
+## Licence
+Maximilian Müller 2021-2023
 [Apache License 2.0](LICENSE)
